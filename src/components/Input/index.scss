@@ -1,0 +1,59 @@
+@import '../_shared/cdn';
+@import '../_shared/colors';
+
+.input-title {
+    font-family: "Exo 2";
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 24px;
+    color: $white;
+    margin-bottom: 8px;
+}
+
+.input-main {
+    height: 56px;
+    width: 100%;
+    border-radius: 10px;
+    border: none;
+    background-color: $graphite;
+    text-indent: 20px;
+
+    font-family: "Exo 2";
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    color: $white;
+
+    &::placeholder {
+        color: $secondary;
+    }
+
+    &:focus {
+        outline: 2px solid $primary;
+    }
+
+    &:disabled {
+        background: $secondary;
+        color: $light;
+    }
+
+    &-error, &-error:focus {
+        outline: 2px solid $error;
+
+    }
+}
+
+.input-error-text {
+    font-family: "Exo 2";
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    color: $error;
+    margin-top: 4px;
+}
+
+textarea.input-main {
+    resize: vertical;
+    text-indent: 0px;
+    padding-left: 20px;
+}
