@@ -14,3 +14,9 @@ export interface IInput {
     errorText?: string,
     onChanged: Function
 }
+
+export interface ISwitch {
+    checked?: boolean,
+    disabled?: boolean,
+    onChange: Function
+}

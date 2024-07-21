@@ -1,12 +1,11 @@
-import React from 'react';
-import { Input } from './components';
+import React, { useState } from 'react';
+import { Input, Switch } from './components';
 import { InputType } from './types';
 
 function App() {
   return (
     <div className="App">
-      
-   </div>
+    </div>
   );
 }
 
