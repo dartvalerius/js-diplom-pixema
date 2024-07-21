@@ -1,8 +1,13 @@
 export enum InputType {
-    TEXT = "text",
-    EMAIL = "email",
-    PASSWORD = "password",
+    TEXT = 'text',
+    EMAIL = 'email',
+    PASSWORD = 'password',
     TEXTAREA = 'textarea'
+}
+
+export enum ButtonType {
+    PRIMARY = 'primary',
+    SECONDARY = 'secondary'
 }
 
 export interface IInput {
@@ -12,7 +17,14 @@ export interface IInput {
     placeholder?: string,
     disabled?: boolean,
     errorText?: string,
-    onChanged: Function
+    onChange: Function
+}
+
+export interface IButton {
+    content: string,
+    type?: ButtonType,
+    disabled?: boolean,
+    onClick: Function
 }
 
 export interface ISwitch {
