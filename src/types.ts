@@ -32,3 +32,10 @@ export interface ISwitch {
     disabled?: boolean,
     onChange: Function
 }
+
+export interface ISearch {
+    onChange: Function,
+    onClickFilter: Function,
+    disabled?: boolean,
+    filtered?: boolean
+}

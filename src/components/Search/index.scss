@@ -1,0 +1,76 @@
+@import '../_shared/cdn';
+@import '../_shared/colors';
+
+.search-input {
+    width: 100%;
+    height: 100%;
+    position: relative;
+
+    &-main {
+        width: 100%;
+        height: 56px;
+        background-color: $graphite;
+        border-radius: 10px;
+        border: none;
+        outline: none;
+        text-indent: 20px;
+
+        font-family: 'Exo 2';
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 24px;
+        color: $white;
+
+        &::placeholder {
+            color: $secondary;
+        }
+
+        &:focus {
+            outline: 2px solid $primary;
+        }
+
+        &:disabled {
+            background-color: $secondary;
+
+            &::placeholder {
+                color: $light;
+            }
+        }
+    }
+
+    &-filter {
+        position: absolute;
+        right: 16px;
+        top: 16px;
+        bottom: 16px;
+        color: $light;
+
+        &:disabled {
+            color: $light;
+            cursor: not-allowed;
+        }
+
+        &__content{
+            position: relative;
+
+            .mark {
+                width: 6px;
+                height: 6px;
+                border-radius: 50%;
+                background-color: $primary;
+                position: absolute;
+                right: 16px;
+                top: 16px;
+                opacity: 0;
+            }
+        }
+    }
+
+    .filtered > .search-input-filter__content {
+        color: $white;
+
+        & > .mark {
+            opacity: 1;
+        }
+    }
+}
