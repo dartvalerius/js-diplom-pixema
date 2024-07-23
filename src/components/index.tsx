@@ -5,3 +5,6 @@ export * from './Search';
 export * from './Link';
 export * from './Logo';
 export * from './User';
+export * from './Films';
+export * from './Films/Film';
+export * from './SignIn';

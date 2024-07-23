@@ -47,3 +47,11 @@ export interface ILink {
     active?: boolean,
     disabled?: boolean
 }
+
+export interface IFilmCard {
+    Title: string,
+    Year: string,
+    imdbID: string,
+    Type: string,
+    Poster: string
+}
