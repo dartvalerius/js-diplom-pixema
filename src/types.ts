@@ -55,3 +55,18 @@ export interface IFilmCard {
     Type: string,
     Poster: string
 }
+
+export interface IFilm {
+    Title: string,
+    Genre: string,
+    imdbRating: string,
+    Runtime: string,
+    Plot: string,
+    Year: string,
+    Released: string,
+    BoxOffice: string,
+    Country: string,
+    Actors: string,
+    Director: string,
+    Poster: string
+}
