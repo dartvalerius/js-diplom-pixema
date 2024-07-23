@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Link } from './components';
+import { Link, Logo } from './components';
 import { Home } from './components/_media';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
