@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Link, Logo } from './components';
+import { Link, Logo, User } from './components';
 import { Home } from './components/_media';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
@@ -10,6 +10,7 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom';
 function App() {
   return (
     <div className="App">
+      <User username='User Name'/>
       {/* <BrowserRouter>
         <Routes>
           <Route path='/' element={

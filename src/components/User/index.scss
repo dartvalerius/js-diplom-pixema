@@ -1,0 +1,83 @@
+@import '../_shared/cdn';
+@import '../_shared/colors';
+
+.user-info {
+    position: relative;
+    display: flex;
+    align-items: center;
+    font-family: 'Exo 2';
+    cursor: pointer;
+    width: min-content;
+
+    &-acronym {
+        font-weight: 700;
+        font-size: 20px;
+        line-height: 24px;
+        letter-spacing: 5%;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        width: 56px;
+        height: 56px;
+        border-radius: 10px;
+        background-color: $primary;
+        color: $white;
+
+        margin-right: 20px;
+    }
+
+    &-name {
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 24px;
+        color: $white;
+
+        margin-right: 40px;
+    }
+
+    &-menu-arrow {
+        line-height: 24px;
+        color: $light;
+
+        &:hover {
+            color: $white;
+        }
+    }
+
+    &-menu {
+        position: absolute;
+        top: 100%;
+        right: 0;
+        left: 0;
+        visibility: collapse;
+    }
+
+    &-menu.show {
+        visibility: visible;
+    }
+
+    &-menu li {
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 24px;
+        color: $white;
+        background-color: $dark;
+        padding: 17px 0px 17px 20px;
+        width: 100%;
+
+        &:hover {
+            color: $primary;
+        }
+
+        &:first-child {
+            border-radius: 10px 10px 0 0;
+        }
+
+        &:last-child {
+            border-radius: 0 0 10px 10px;
+            border-top: 1px solid $graphite;
+        }
+    }
+}
