@@ -39,3 +39,11 @@ export interface ISearch {
     disabled?: boolean,
     filtered?: boolean
 }
+
+export interface ILink {
+    children: any,
+    title: string,
+    path: string,
+    active?: boolean,
+    disabled?: boolean
+}
