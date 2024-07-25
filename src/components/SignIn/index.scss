@@ -1,0 +1,42 @@
+@import '../_shared/cdn';
+@import '../_shared/colors';
+
+.sign-in {
+    padding: 48px 62px;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+
+    &-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-grow: 1;
+
+        &-form {
+            width: 574px;
+            border-radius: 10px;
+            background-color: $dark;
+            padding: 40px;
+
+            &__title {
+                font-family: 'Exo 2';
+                font-weight: 600;
+                font-size: 24px;
+                line-height: 36px;
+                color: $white;
+                margin-bottom: 40px;
+            }
+        }
+    }
+
+    &-link {
+        font-family: 'Exo 2';
+        font-weight: 500;
+        color: $secondary;
+
+        &.dark {
+            color: $white;
+        }
+    }
+}
