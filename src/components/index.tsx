@@ -8,3 +8,4 @@ export * from './User';
 export * from './Films';
 export * from './Films/Film';
 export * from './SignIn';
+export * from './Main';

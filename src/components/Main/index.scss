@@ -1,0 +1,26 @@
+@import '../_shared/cdn';
+@import '../_shared/colors';
+
+.wrapper {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-color: $black;
+
+    .header {
+        background-color: blue;
+    }
+
+    .main {
+        display: flex;
+        flex-grow: 1;
+
+        &-menu {
+            background-color: yellow;
+        }
+    }
+
+    .footer {
+        background-color: brown;
+    }
+}

@@ -9,11 +9,9 @@
 }
 
 body {
-  height: 100vh;
+  height: 100%;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-
-  background-color: $black;
 }
 
 #root {

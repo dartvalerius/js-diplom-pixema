@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Film, Films, Link, Logo, SignIn, User } from './components';
+import { Film, Films, Link, Logo, Main, SignIn, User } from './components';
 import { Home } from './components/_media';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import { FilmCard } from './components/Films/FilmCard';
@@ -12,16 +12,17 @@ import { FilmCard } from './components/Films/FilmCard';
 
 function App() {
   return (
-    <div className="App">
-      <BrowserRouter>
+    <BrowserRouter>
         <Routes>
-          <Route path='/' element={<Films />} />
-          <Route path=':id' element={<Film />}/>
+          <Route index element={<Main><Films /></Main>} />
+          <Route path='/' element={<Main><Films /></Main>} />
+          <Route path=':id' element={<Main><Film /></Main>}/>
           <Route path='/signIn' element={<SignIn />} />
-          <Route path="*" element={<div>WrongPage</div>} />
+          <Route path="*" element={<Main>WrongPage</Main>} />
         </Routes>
-      </BrowserRouter>
-    </div>
+        <Routes>
+        </Routes>
+    </BrowserRouter>
   );
 }
 
