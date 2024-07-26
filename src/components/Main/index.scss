@@ -6,6 +6,8 @@
     background-color: $black;
 
     &-menu {
+        position: sticky;
+        top: 0;
         padding: 48px 146px 64px 62px;
         display: flex;
         flex-direction: column;
@@ -41,6 +43,8 @@
         padding: 40px 63px 64px 0px;
     
         .header {
+            position: sticky;
+            top: 0;
             display: flex;
             gap: 41px;
             margin-bottom: 56px;

@@ -1,5 +1,7 @@
-import { SIGN_IN_USER } from "../action-types";
+import { IUser } from "../../types";
+import { SET_USER } from "../action-types";
 
-export const signInUser = () => ({
-    type: SIGN_IN_USER
+export const setUser = (user: IUser) => ({
+    type: SET_USER,
+    user
 })

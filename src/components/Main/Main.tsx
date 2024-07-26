@@ -5,8 +5,11 @@ import { Search } from '../Search';
 import { User } from '../User';
 import { ItemLink } from '../Link';
 import { Favorites, Home, Setting, Trends } from '../_media';
+import { useSelector } from 'react-redux';
+import { IStorState } from '../../types';
 
 export const Main = ({children}: {children: ReactNode}) => {
+    const user = useSelector((state: IStorState) => state.user.user)
     return (
         <div className='main'>
             <div className='main-menu'>
@@ -35,7 +38,7 @@ export const Main = ({children}: {children: ReactNode}) => {
             <div className='wrapper'>
                 <header className='header'>
                     <Search onChange={()=> {}} onClickFilter={() => {}}/>
-                    <User />
+                    <User username={user.username}/>
                 </header>
                 <main className='main-content'>
                     {children}

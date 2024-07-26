@@ -71,6 +71,13 @@ export interface IFilm {
     Poster: string
 }
 
+export interface IUser {
+    apiKey: string,
+    email: string,
+    username: string,
+    favorites?: string[]
+}
+
 export interface IFilmCardsState {
     filmCards: IFilmCard[],
 }
@@ -80,5 +87,11 @@ export interface IUIState {
 }
 
 export interface IUserState {
-    
+    user: IUser
+}
+
+export interface IStorState {
+    films: IFilmCardsState,
+    ui: IUIState,
+    user: IUserState
 }
