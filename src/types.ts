@@ -70,3 +70,15 @@ export interface IFilm {
     Director: string,
     Poster: string
 }
+
+export interface IFilmCardsState {
+    filmCards: IFilmCard[],
+}
+
+export interface IUIState {
+
+}
+
+export interface IUserState {
+    
+}
