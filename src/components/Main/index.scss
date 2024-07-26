@@ -1,26 +1,58 @@
 @import '../_shared/cdn';
 @import '../_shared/colors';
 
-.wrapper {
-    height: 100vh;
+.main {
     display: flex;
-    flex-direction: column;
     background-color: $black;
 
-    .header {
-        background-color: blue;
-    }
-
-    .main {
+    &-menu {
+        padding: 48px 146px 64px 62px;
         display: flex;
-        flex-grow: 1;
+        flex-direction: column;
+        justify-content: space-between;
 
-        &-menu {
-            background-color: yellow;
+        &-list {
+            margin-top: 64px;
+            flex-grow: 1;
+
+            & li {
+                margin-bottom: 40px;
+            }
+
+            & li:last-child {
+                margin-bottom: 0px;
+            }
+        }
+
+        &-copyright {
+            font-family: "Exo 2";
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 24px;
+            color: $light;
         }
     }
 
-    .footer {
-        background-color: brown;
+    .wrapper {
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        flex-grow: 1;
+        padding: 40px 63px 64px 0px;
+    
+        .header {
+            display: flex;
+            gap: 41px;
+            margin-bottom: 56px;
+        }
+    
+        .main-content {
+            display: flex;
+            flex-grow: 1;
+        }
+    
+        .footer {
+            
+        }
     }
 }

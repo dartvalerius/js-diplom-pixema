@@ -1,8 +1,8 @@
-import { NavLink } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { ILink } from '../../types';
 import './index.scss';
 
-export const Link = ({children, title, path, active, disabled}: ILink) => {
+export const ItemLink = ({children, title, path, active, disabled}: ILink) => {
     if(disabled) {
         return (
             <div className='link disabled'>
@@ -12,10 +12,10 @@ export const Link = ({children, title, path, active, disabled}: ILink) => {
         )
     } else {
         return (
-            <NavLink className={`link ${active && 'active'}`} to={path}>
+            <Link className={`link ${active? 'active' : ''}`} to={path}>
                 {children}
                 {title}
-            </NavLink>
+            </Link>
         )
     }
 }
