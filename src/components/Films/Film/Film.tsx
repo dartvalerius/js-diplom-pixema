@@ -1,6 +1,10 @@
-import { IFilm } from '../../../types';
+import { useParams } from 'react-router-dom';
+import { IFilm, IStorState } from '../../../types';
 import { Favorites, Share } from '../../_media';
 import './index.scss';
+import { useDispatch, useSelector } from 'react-redux';
+import { useEffect } from 'react';
+import { loadSelectedFilm } from '../../../redux/action-creators';
 
 const FilmInfo = ({title, text}: {title: string, text: string}) => {
     return (
@@ -11,23 +15,19 @@ const FilmInfo = ({title, text}: {title: string, text: string}) => {
     )
 }
 
-export const Film = () => {
-    const film: IFilm = {
-        "Title": "Star Wars: Episode IV - A New Hope",
-        "Genre": "Action, Adventure, Fantasy",
-        "imdbRating": "8.6",
-        "Runtime": "121 min",
-        "Plot": "Luke Skywalker joins forces with a Jedi Knight, a cocky pilot, a Wookiee and two droids to save the galaxy from the Empire's world-destroying battle station, while also attempting to rescue Princess Leia from the mysterious Darth ...",
-        "Year": "1977",
-        "Released": "25 May 1977",
-        "BoxOffice": "$460,998,507",
-        "Country": "United States",
-        "Actors": "Mark Hamill, Harrison Ford, Carrie Fisher",
-        "Director": "George Lucas",
-        "Poster": "https://m.media-amazon.com/images/M/MV5BOTA5NjhiOTAtZWM0ZC00MWNhLThiMzEtZDFkOTk2OTU1ZDJkXkEyXkFqcGdeQXVyMTA4NDI1NTQx._V1_SX300.jpg",
-    }
+const getGenre = (genre: string) =>  {
+    if (genre)
+        return genre.split(', ').join(' · ');
+    else return ''
+}
 
-    const genre = film.Genre.split(', ').join(' · ')
+export const Film = () => {
+    const { id = '' } = useParams();
+    const film = useSelector((state: IStorState) => state.films.selectedFilm);
+    const dispatch = useDispatch();
+    useEffect(() => {
+        dispatch(loadSelectedFilm(id))
+    }, [id])
     return (
         <div className='film'>
             <div className="film-poster">
@@ -40,7 +40,7 @@ export const Film = () => {
                 </div>
             </div>
             <div className="film-info">
-                <div className="film-info-genre">{genre}</div>
+                <div className="film-info-genre">{getGenre(film.Genre)}</div>
                 <div className="film-info-title">{film.Title}</div>
                 <div className="film-info-added">
                     <div className="film-info-added__rating">{film.imdbRating}</div>

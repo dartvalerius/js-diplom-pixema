@@ -80,6 +80,7 @@ export interface IUser {
 
 export interface IFilmsState {
     filmCards: IFilmCard[],
+    selectedFilm: IFilm,
 }
 
 export interface IUIState {

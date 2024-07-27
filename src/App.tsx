@@ -20,7 +20,7 @@ function App() {
         apiKey: localStorage.getItem('apiKey') ?? '',
         email: localStorage.getItem('email') ?? '',
         username: localStorage.getItem('username') ?? '',
-        favorites: Array<string>(localStorage.getItem('favorites') ?? '')
+        favorites: (localStorage.getItem('favorites') ?? '').split(',')
       })) 
     } else {
       if (window.location.pathname !== '/signIn')
