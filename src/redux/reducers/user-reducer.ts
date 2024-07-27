@@ -1,5 +1,5 @@
 import { IUser, IUserState } from "../../types";
-import { SET_USER } from "../action-types";
+import { LOG_OUT_USER, SET_USER } from "../action-types";
 
 const initialState = {
     user: {} as IUser
@@ -15,6 +15,16 @@ export const userReducer = (state: IUserState = initialState, action: any) => {
             return ({
                 ...state,
                 user: action.user
+            })
+        }
+        case LOG_OUT_USER: {
+            localStorage.removeItem('apiKey');
+            localStorage.removeItem('username');
+            localStorage.removeItem('email');
+            localStorage.removeItem('favorites');
+            return ({
+                ...state,
+                user: undefined
             })
         }
         default: return state;

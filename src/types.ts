@@ -78,7 +78,7 @@ export interface IUser {
     favorites?: string[]
 }
 
-export interface IFilmCardsState {
+export interface IFilmsState {
     filmCards: IFilmCard[],
 }
 
@@ -91,7 +91,7 @@ export interface IUserState {
 }
 
 export interface IStorState {
-    films: IFilmCardsState,
+    films: IFilmsState,
     ui: IUIState,
     user: IUserState
 }
