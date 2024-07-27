@@ -7,7 +7,7 @@
 
     &-menu {
         position: sticky;
-        top: 0;
+        left: 0;
         padding: 48px 146px 64px 62px;
         display: flex;
         flex-direction: column;
@@ -48,11 +48,13 @@
             display: flex;
             gap: 41px;
             margin-bottom: 56px;
+            background-color: $black;
         }
     
         .main-content {
             display: flex;
             flex-grow: 1;
+            overflow: auto;
         }
     
         .footer {

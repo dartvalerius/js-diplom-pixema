@@ -56,6 +56,11 @@ export interface IFilmCard {
     Poster: string
 }
 
+export interface IFilCardsOptions {
+    currentPage: number,
+    search?: string
+}
+
 export interface IFilm {
     Title: string,
     Genre: string,
@@ -81,6 +86,7 @@ export interface IUser {
 export interface IFilmsState {
     filmCards: IFilmCard[],
     selectedFilm: IFilm,
+    currentPage: number
 }
 
 export interface IUIState {
